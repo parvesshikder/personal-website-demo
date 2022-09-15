@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<!-- Designined by CodingLab | www.youtube.com/codinglabyt -->
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <title> Parves Shikder</title>
+  <link rel="shortcut icon" type="image/jpg" href="https://drive.google.com/uc?id=1zJ3oIlrVFeqzNG6Jd5WV8F_ZXV5sUBBg" />
+
+  <!-- Fontawesome CDN Link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/magnific-popup.min.css" rel="stylesheet">
+
+
+
+  <style>
+    /* Google Font CDN Link */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+    .myhover:hover {
+      opacity: 0.5;
+    }
+
+
+    html,
+    body {
+      scroll-behavior: smooth;
+      overflow-x: hidden !important;
+      width: 100 vw !important;
+    }
+    #navbar-iframe {
+      height:0px;
+      visibility:hidden;
+      display:none;
+      }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      line-height: 1.2;
+    }
+
+
+    .container {
+      max-width: 1170px;
+      margin: auto;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    img {
+      max-width: 100%;
+      vertical-align: middle;
+    }
+
+    /*.gallery*/
+    .gallery {
+      width: 100%;
+      display: block;
+      min-height: 100vh;
+      background-color: #F0F8FF;
+      padding: 100px 0;
+    }
+
+    .gallery .gallery-filter {
+      padding: 0 15px;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .gallery .gallery-filter .filter-item {
+      color: #0E2431;
+      font-size: 18px;
+      text-transform: uppercase;
+      display: inline-block;
+      margin: 0 10px;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      line-height: 1.2;
+      transition: all 0.3s ease;
+    }
+
+    .gallery .gallery-filter .filter-item.active {
+      color: #4070f4;
+      border-color: #4070f4;
+    }
+
+    .gallery .gallery-item {
+      width: calc(100% / 3);
+      padding: 15px;
+    }
+
+    .gallery .gallery-item-inner img {
+      width: 100%;
+    }
+
+    .gallery .gallery-item.show {
+      animation: fadeIn 0.5s ease;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .gallery .gallery-item.hide {
+      display: none;
+    }
+
+    /*responsive*/
+    @media(max-width: 991px) {
+      .gallery .gallery-item {
+        width: 50%;
+      }
+    }
+
+    @media(max-width: 767px) {
+      .gallery .gallery-item {
+        width: 100%;
+      }
+
+      .gallery .gallery-filter .filter-item {
+        margin-bottom: 10px;
+      }
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+      scroll-behavior: smooth;
+    }
+
+    /* Custom Scroll Bar CSS */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #6e93f7;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #4070f4;
+    }
+
+    /* navbar styling */
+    nav {
+      position: fixed;
+      width: 100%;
+      padding: 20px 0;
+      z-index: 998;
+      transition: all 0.3s ease;
+      font-family: 'Ubuntu', sans-serif;
+    }
+
+    nav.sticky {
+      background: #4070f4;
+      padding: 13px 0;
+    }
+
+    nav .navbar {
+      width: 90%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: auto;
+    }
+
+    nav .navbar .logo a {
+      font-weight: 500;
+      font-size: 35px;
+      color: #4070f4;
+    }
+
+    nav.sticky .navbar .logo a {
+      color: #fff;
+    }
+
+    nav .navbar .menu {
+      display: flex;
+      position: relative;
+    }
+
+    nav .navbar .menu li {
+      list-style: none;
+      margin: 0 8px;
+    }
+
+    .navbar .menu a {
+      font-size: 18px;
+      font-weight: 500;
+      color: #0E2431;
+      padding: 6px 0;
+      transition: all 0.4s ease;
+    }
+
+    .navbar .menu a:hover {
+      color: #4070f4;
+    }
+
+    nav.sticky .menu a {
+      color: #FFF;
+    }
+
+    nav.sticky .menu a:hover {
+      color: #0E2431;
+    }
+
+    .navbar .media-icons a {
+      color: #4070f4;
+      font-size: 18px;
+      margin: 0 6px;
+    }
+
+    nav.sticky .media-icons a {
+      color: #FFF;
+    }
+
+    /* Side Navigation Menu Button CSS */
+    nav .menu-btn,
+    .navbar .menu .cancel-btn {
+      position: absolute;
+      color: #fff;
+      right: 30px;
+      top: 20px;
+      font-size: 20px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: none;
+    }
+
+    nav .menu-btn {
+      color: #4070f4;
+    }
+
+    nav.sticky .menu-btn {
+      color: #FFF;
+    }
+
+    .navbar .menu .menu-btn {
+      color: #fff;
+    }
+
+    /* home section styling */
+    .home {
+      height: 100vh;
+      width: 100%;
+      background: url("https://drive.google.com/uc?id=1pbOWp6Px0M2eZaXqONbPMoAnT6T4tBPk") no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      font-family: 'Ubuntu', sans-serif;
+    }
+
+    .home .home-content {
+      width: 90%;
+      height: 100%;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .home .text-one {
+      font-size: 25px;
+      color: #0E2431;
+    }
+
+    .home .text-two {
+      color: #0E2431;
+      font-size: 75px;
+      font-weight: 600;
+      margin-left: -3px;
+    }
+
+    .home .text-three {
+      font-size: 40px;
+      margin: 5px 0;
+      color: #4070f4;
+    }
+
+    .home .text-four {
+      font-size: 23px;
+      margin: 5px 0;
+      color: #0E2431;
+    }
+
+    .home .button {
+      margin: 14px 0;
+    }
+
+    .home .button button {
+      outline: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 25px;
+      font-weight: 400;
+      background: #4070f4;
+      color: #fff;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: all 0.4s ease;
+    }
+
+    .home .button button:hover {
+      border-color: #4070f4;
+      background-color: #fff;
+      color: #4070f4;
+    }
+
+    /* About Section Styling */
+    /* Those Elements Where We Have Apply Same CSS,
+ I'm Selecting Directly 'Section Tag' and 'Class'  */
+    section {
+      padding-top: 40px;
+    }
+
+    section .content {
+      width: 80%;
+      margin: 40px auto;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .about .about-details {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    section .title {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+
+    section .title span {
+      color: #0E2431;
+      font-size: 30px;
+      font-weight: 600;
+      position: relative;
+      padding-bottom: 8px;
+    }
+
+    section .title span::before,
+    section .title span::after {
+      content: '';
+      position: absolute;
+      height: 3px;
+      width: 100%;
+      background: #4070f4;
+      left: 0;
+      bottom: 0;
+    }
+
+    section .title span::after {
+      bottom: -7px;
+      width: 70%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .about .about-details .left {
+      width: 45%;
+    }
+
+    .about .left img {
+      height: 400px;
+      width: 400px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .about-details .right {
+      width: 55%;
+    }
+
+    section .topic {
+      color: #0E2431;
+      font-size: 25px;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    .about-details .right p {
+      text-align: justify;
+      color: #0E2431;
+    }
+
+    section .button {
+      margin: 16px 0;
+    }
+
+    section .button button {
+      outline: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-size: 25px;
+      font-weight: 400;
+      background: #4070f4;
+      color: #fff;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: all 0.4s ease;
+    }
+
+    section .button button:hover {
+      border-color: #4070f4;
+      background-color: #fff;
+      color: #4070f4;
+    }
+
+    /* My Skills CSS */
+    .skills {
+      background: #F0F8FF;
+    }
+
+    .skills .content {
+      padding: 40px 0;
+    }
+
+    .skills .skills-details {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .skills-details .text {
+      width: 50%;
+    }
+
+    .skills-details p {
+      color: #0E2431;
+      text-align: justify;
+    }
+
+    .skills .skills-details .experience {
+      display: flex;
+      align-items: center;
+      margin: 0 10px;
+    }
+
+    .skills-details .experience .num {
+      color: #0E2431;
+      font-size: 80px;
+    }
+
+    .skills-details .experience .exp {
+      color: #0E2431;
+      margin-left: 20px;
+      font-size: 18px;
+      font-weight: 500;
+      margin: 0 6px;
+    }
+
+    .skills-details .boxes {
+      width: 45%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .skills-details .box {
+      width: calc(100% / 2 - 20px);
+      margin: 20px 0;
+    }
+
+    .skills-details .boxes .topic {
+      font-size: 20px;
+      color: #4070f4;
+    }
+
+    .skills-details .boxes .per {
+      font-size: 60px;
+      color: #4070f4;
+    }
+
+    /* My Services CSS */
+    .services .boxes {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .services .boxes .box {
+      margin: 20px 0;
+      width: calc(100% / 3 - 20px);
+      text-align: center;
+      border-radius: 12px;
+      padding: 30px 10px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+      cursor: default;
+      transition: all 0.4s ease;
+    }
+
+    .services .boxes .box:hover {
+      background: #4070f4;
+      color: #fff;
+    }
+
+    .services .boxes .box .icon {
+      height: 50px;
+      width: 50px;
+      background: #4070f4;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 50px;
+      font-size: 18px;
+      color: #fff;
+      margin: 0 auto 10px auto;
+      transition: all 0.4s ease;
+    }
+
+    .boxes .box:hover .icon {
+      background-color: #fff;
+      color: #4070f4;
+    }
+
+    .services .boxes .box:hover .topic,
+    .services .boxes .box:hover p {
+      color: #0E2431;
+      transition: all 0.4s ease;
+    }
+
+    .services .boxes .box:hover .topic,
+    .services .boxes .box:hover p {
+      color: #fff;
+    }
+
+    /* Contact Me CSS */
+    .contact {
+      background: #fff;
+    }
+
+    .contact .content {
+      margin: 0 auto;
+      padding: 30px 0;
+    }
+
+    .contact .text {
+      width: 60%;
+      text-align: center;
+      margin: auto;
+    }
+
+    /* Footer CSS */
+    footer {
+      background: #4070f4;
+      padding: 15px 0;
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    footer .text span {
+      font-size: 17px;
+      font-weight: 400;
+      color: #fff;
+    }
+
+    footer .text span a {
+      font-weight: 500;
+      color: #FFF;
+    }
+
+    footer .text span a:hover {
+      text-decoration: underline;
+    }
+
+    /* Scroll TO Top Button CSS */
+    .scroll-button a {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      color: #fff;
+      background: #4070f4;
+      padding: 7px 12px;
+      ;
+      font-size: 18px;
+      border-radius: 6px;
+      box-shadow: rgba(0, 0, 0, 0.15);
+      display: none;
+    }
+
+    /* Responsive Media Query */
+    @media (max-width: 1190px) {
+      section .content {
+        width: 85%;
+      }
+    }
+
+    @media (max-width: 1000px) {
+      .about .about-details {
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      .about .about-details .left {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+
+      .about-details .right {
+        width: 90%;
+        margin: 40px 0;
+      }
+
+      .services .boxes .box {
+        margin: 20px 0;
+        width: calc(100% / 2 - 20px);
+      }
+    }
+
+    @media (max-width: 900px) {
+      .about .left img {
+        height: 350px;
+        width: 350px;
+      }
+    }
+
+    @media (max-width: 750px) {
+      nav .navbar {
+        width: 90%;
+      }
+
+      nav .navbar .menu {
+        position: fixed;
+        left: -100%;
+        top: 0;
+        background: #0E2431;
+        height: 100vh;
+        max-width: 400px;
+        width: 100%;
+        padding-top: 60px;
+        flex-direction: column;
+        align-items: center;
+        transition: all 0.5s ease;
+      }
+
+      .navbar.active .menu {
+        left: 0;
+      }
+
+      nav .navbar .menu a {
+        font-size: 23px;
+        display: block;
+        color: #fff;
+        margin: 10px 0;
+      }
+
+      nav.sticky .menu a:hover {
+        color: #4070f4;
+      }
+
+      nav .navbar .media-icons {
+        display: none;
+      }
+
+      nav .menu-btn,
+      .navbar .menu .cancel-btn {
+        display: block;
+      }
+
+      .home .text-two {
+        margin-top: 10px;
+        font-size: 65px;
+      }
+
+      .home .text-three {
+        font-size: 35px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+
+      .skills .skills-details {
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      .skills-details .text {
+        width: 100%;
+        margin-bottom: 50px;
+      }
+
+      .skills-details .boxes {
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+      }
+
+      .services .boxes .box {
+        margin: 20px 0;
+        width: 100%;
+      }
+
+      .contact .text {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .home .text-two {
+        font-size: 55px;
+      }
+
+      .home .text-three {
+        font-size: 33px;
+      }
+
+      .skills-details .boxes .per {
+        font-size: 50px;
+        color: #4070f4;
+      }
+    }
+  </style>
+</head>
+
+
+
+
+<!-- https://drive.google.com/uc?id=1pbOWp6Px0M2eZaXqONbPMoAnT6T4tBPk -->
+<!-- https://drive.google.com/uc?id=15hiqovSUJ-uZ1E8Acx5hOcx_mIPot6xj -->
+<!-- https://drive.google.com/uc?id=1zJ3oIlrVFeqzNG6Jd5WV8F_ZXV5sUBBg -->
+
+<body>
+  <!-- Move to up button -->
+  <div class="scroll-button">
+    <a href="#home"><i class="fas fa-arrow-up"></i></a>
+  </div>
+  <!-- navgaition menu -->
+  <nav>
+    <div class="navbar">
+      <div class="logo"><a style="text-decoration: none; margin-left: -13px;" href="#home">Parves.</a></div>
+      <ul class=" menu">
+        <li><a style="text-decoration: none;" href="#home">Home</a></li>
+        <li><a style="text-decoration: none;" href="#about">About</a></li>
+        <li><a style="text-decoration: none;" href="#skills">Skills</a></li>
+        <li><a style="text-decoration: none;" href="#services">Services</a></li>
+        <li><a style="text-decoration: none;" href="#portfolio">Portfolio</a></li>
+        <li><a style="text-decoration: none;" href="#contact">Contact</a></li>
+        <div class="cancel-btn">
+          <i class="fas fa-times"></i>
+        </div>
+      </ul>
+
+      <div class="media-icons">
+
+        <div class="gallery-item headphone">
+          <div class="gallery-item-inner">
+            <p class="text-center">
+              <a href="#headerPopup" id="headerVideoLink5" class="popup-modal">
+                <i class="fab fa-youtube myhover"></i></a>
+
+            </p>
+            <div id="headerPopup" class="mfp-hide embed-responsive embed-responsive-21by9">
+              <iframe class="embed-responsive-item" width="854" height="480"
+                src="https://www.youtube.com/embed/zW7v0jK562s" frameborder="0" allow="encrypted-media"
+                allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="menu-btn">
+      <i style="margin-top: 15px;" class="fas fa-bars"></i>
+    </div>
+  </nav>
+
+  <!-- Home Section Start -->
+  <section class="home" id="home">
+    <div class="home-content">
+      <div class="text">
+        <div class="text-one">Hello,</div>
+        <div class="text-two">I'm Parves Shikder</div>
+        <div class="text-three">UI/UX Designer & Mobile App Developer</div>
+        <!-- <div class="text-four">From Malaysia</div> -->
+      </div>
+      <div class="button">
+        
+            <a href="https://www.upwork.com/freelancers/~01fc262ce231cb9e9c">
+                <button> Hire Me </button>
+            </a>
+            
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section Start -->
+  <section class="about" id="about">
+    <div class="content">
+      <div class="title"><span>About Me</span></div>
+      <div class="about-details">
+        <div class="left">
+          <img src="https://drive.google.com/uc?id=18i3l7qt6V719L89QFw-yPE7J1cMg3kPt" alt="">
+        </div>
+        <div class="right">
+          <div class="topic">I love Coding and Designing Mobile Apps</div>
+          <p>Hello there. My name is Parves. I'm a mobile UI/UX Designer and Flutter Mobile App Developer. Working for more than a year, I've designed and build mobile applications for several businesses. If you ever require my assistance, please don't hesitate to contact me at any time.
+          </p>
+          <div class="button">
+              <a href="https://www.upwork.com/freelancers/~01fc262ce231cb9e9c">
+            <button>Let's Chat</button>
+        </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- My Skill Section Start -->
+  <!-- Section Tag and Other Div will same where we need to put same CSS -->
+  <section class="skills" id="skills">
+    <div class="content">
+      <div class="title"><span>My Skills</span></div>
+      <div class="skills-details">
+        <div class="text">
+          <div class="topic">Skills Reflects Our Knowledge</div>
+          <p>I always use Figma for UI/UX design and Flutter for mobile app development. Figma is an all-in-one design
+            software and Flutter is one of the top technologies right now. It's a great choice for both iOS and Android.
+          </p>
+          <div class="experience">
+            <div class="num">1+</div>
+            <div class="exp">Years Of <br> Experience</div>
+          </div>
+        </div>
+        <div class="boxes">
+          <div class="box">
+            <div class="topic">FIGMA</div>
+            <div class="per">95%</div>
+          </div>
+          <div class="box">
+            <div class="topic">FLUTTER</div>
+            <div class="per">90%</div>
+          </div>
+          <div class="box">
+            <div class="topic">DART</div>
+            <div class="per">90%</div>
+          </div>
+          <div class="box">
+            <div class="topic">FIREBASE</div>
+            <div class="per">85%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- My Services Section Start -->
+  <section class="services" id="services">
+    <div class="content">
+      <div class="title"><span>My Services</span></div>
+      <div class="boxes">
+        <div class="box">
+          <div class="icon">
+            <i class="fas fa-pen-nib"></i>
+          </div>
+          <div class="topic">UI/UX Design</div>
+          <p>I will create a UI design that is modern, unique, professional, and easy to use for your Mobile App Design
+            project.</p>
+        </div>
+        <div class="box">
+          <div class="icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <div class="topic">Mobile App Development</div>
+          <p>I'll bring your dream mobile app idea to life using flutter, a cutting-edge technology.</p>
+        </div>
+        <div class="box">
+          <div class="icon">
+            <i class="fas fa-bug"></i>
+          </div>
+          <div class="topic">Flutter Apps Bug Fixing</div>
+          <p>I'll fix your flutter app's bug so it can operate properly and fully functionally again.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Portfolio -->
+  <section class="gallery portfolio" id="portfolio">
+    <div class="title" style=" font-family: 'Ubuntu', sans-serif;
+  "><span>My Portfolio</span></div>
+    <div class="container">
+      <div class="row">
+        <div class="gallery-filter" style="font-family: 'Ubuntu', sans-serif;
+      ">
+          <span class="filter-item active" data-filter="all">all</span>
+          <span class="filter-item" data-filter="ui">Mobile UI/UX</span>
+          <span class="filter-item" data-filter="app">Flutter App</span>
+        </div>
+      </div>
+
+      <div class="row">
+
+
+
+        <div class="gallery-item ui">
+          <div class="gallery-item-inner">
+            <p class="text-center">
+                <iframe width="100%" height="245px" src="https://www.youtube.com/embed/RblXuJaCPJM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </p>
+            
+          </div>
+        </div>
+<!--  -->
+
+        <div class="gallery-item ui app">
+            <div class="gallery-item-inner">
+              <p class="text-center">
+                <iframe width="100%" height="245px" src="https://www.youtube.com/embed/zW7v0jK562s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </p>
+              
+            </div>
+          </div>
+
+
+        <div class="gallery-item ui">
+          <div class="gallery-item-inner">
+            <p class="text-center">
+                <iframe width="100%" height="245px" src="https://www.youtube.com/embed/C6LhA2TqgMM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </p>
+            
+          </div>
+        </div>
+
+
+        <div class="gallery-item ui">
+          <div class="gallery-item-inner">
+            <p class="text-center">
+                <iframe width="100%" height="245px" src="https://www.youtube.com/embed/Mid6AMVEUyg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </p>
+            
+          </div>
+        </div>
+
+        <div class="gallery-item ui">
+          <div class="gallery-item-inner">
+            <p class="text-center">
+                <iframe width="100%" height="245px" src="https://www.youtube.com/embed/UNeRuARGueQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </p>
+            
+          </div>
+        </div>
+
+
+        <div class="gallery-item ui">
+          <div class="gallery-item-inner">
+            <p class="text-center">
+                <iframe width="100%" height="245px" src="https://www.youtube.com/embed/80--HEzcBmM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </p>
+            
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+        <!-- gallery item end -->
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Port -->
+
+
+  <!-- Contact Me section Start -->
+  <section class="contact" id="contact">
+    <div class="content">
+      <div class="title"><span>Contact Me</span></div>
+      <div class="text">
+        <div class="topic">Have Any Project?</div>
+        <p>
+          <b style="color: #4070f4;">Let's get started?</b> <br> <br>
+
+
+          <i>If you don't have your requirements ready, No worries, please send me a message
+            so
+            we
+            can talk about
+            them.</i>
+
+        </p>
+        <div class="button">
+            <a href="https://www.upwork.com/freelancers/~01fc262ce231cb9e9c">
+          <button>Let's Chat</button>
+        </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section Start -->
+  <footer>
+    <div class="text">
+      <span>Created By <a href="#">Parves Shikder</a> | &#169; 2021 All Rights Reserved</span>
+    </div>
+  </footer>
+
+
+  <script>
+    // Sticky Navigation Menu JS Code
+    let nav = document.querySelector("nav");
+    let scrollBtn = document.querySelector(".scroll-button a");
+    console.log(scrollBtn);
+    let val;
+    window.onscroll = function () {
+      if (document.documentElement.scrollTop > 20) {
+        nav.classList.add("sticky");
+        scrollBtn.style.display = "block";
+      } else {
+        nav.classList.remove("sticky");
+        scrollBtn.style.display = "none";
+      }
+
+    }
+
+    // Side NavIgation Menu JS Code
+    let body = document.querySelector("body");
+    let navBar = document.querySelector(".navbar");
+    let menuBtn = document.querySelector(".menu-btn");
+    let cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = function () {
+      navBar.classList.add("active");
+      menuBtn.style.opacity = "0";
+      menuBtn.style.pointerEvents = "none";
+      body.style.overflow = "hidden";
+      scrollBtn.style.pointerEvents = "none";
+    }
+    cancelBtn.onclick = function () {
+      navBar.classList.remove("active");
+      menuBtn.style.opacity = "1";
+      menuBtn.style.pointerEvents = "auto";
+      body.style.overflow = "auto";
+      scrollBtn.style.pointerEvents = "auto";
+    }
+
+    // Side Navigation Bar Close While We Click On Navigation Links
+    let navLinks = document.querySelectorAll(".menu li a");
+    for (var i = 0; i < navLinks.length; i++) {
+      navLinks[i].addEventListener("click", function () {
+        navBar.classList.remove("active");
+        menuBtn.style.opacity = "1";
+        menuBtn.style.pointerEvents = "auto";
+      });
+    }
+
+
+
+    const filterContainer = document.querySelector(".gallery-filter"),
+      galleryItems = document.querySelectorAll(".gallery-item");
+
+    filterContainer.addEventListener("click", (event) => {
+      if (event.target.classList.contains("filter-item")) {
+        // deactivate existing active 'filter-item'
+        filterContainer.querySelector(".active").classList.remove("active");
+        // activate new 'filter-item'
+        event.target.classList.add("active");
+        const filterValue = event.target.getAttribute("data-filter");
+        galleryItems.forEach((item) => {
+          if (item.classList.contains(filterValue) || filterValue === 'all') {
+            item.classList.remove("hide");
+            item.classList.add("show");
+          }
+          else {
+            item.classList.remove("show");
+            item.classList.add("hide");
+          }
+        });
+      }
+    });
+  </script>
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/jquery.magnific-popup.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $('#headerVideoLink').magnificPopup({
+        type: 'inline',
+        midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+      });
+    });
+
+  </script>
+
+
+
+  <script>
+    $(document).ready(function () {
+      $('#headerVideoLink1').magnificPopup({
+        type: 'inline',
+        midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+      });
+    });
+
+  </script>
+
+
+  <script>
+    $(document).ready(function () {
+      $('#headerVideoLink2').magnificPopup({
+        type: 'inline',
+        midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+      });
+    });
+
+  </script>
+
+
+
+  <script>
+    $(document).ready(function () {
+      $('#headerVideoLink3').magnificPopup({
+        type: 'inline',
+        midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+      });
+    });
+
+  </script>
+
+
+  <script>
+    $(document).ready(function () {
+      $('#headerVideoLink4').magnificPopup({
+        type: 'inline',
+        midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+      });
+    });
+
+  </script>
+
+
+  <script>
+    $(document).ready(function () {
+      $('#headerVideoLink5').magnificPopup({
+        type: 'inline',
+        midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+      });
+    });
+
+  </script>
+
+  <script>
+    $(document).ready(function () {
+      $('#headerVideoLink6').magnificPopup({
+        type: 'inline',
+        midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+      });
+    });
+
+  </script>
+
+
+
+</body>
+
+</html>
